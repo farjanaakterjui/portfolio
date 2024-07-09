@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-    
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,30 +8,66 @@
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
+        }
+
+        .container {
             display: flex;
+            flex-direction: column;
         }
 
         .left-side {
-            width: 30%;
-            padding: 20px;
-            background: #f0f0f0;
+            background: #f4f4f4;
+            height: 100vh;
+            width: 25%;
             position: fixed;
-            height: 100%;
             overflow-y: auto;
-            float: left;
+            padding: 20px;
+  	    margin-top: 40px;
+
+
         }
 
         .right-side {
-            width: 70%;
-            margin-left: 0%;
+            margin-left: 30%;
             padding: 20px;
-            float:right;
+        }
+
+        nav {
+            position: fixed;
+            width: 100%;
+            background: #333;
+            color: #fff;
+            padding: 10px 0;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: space-around;
+        }
+
+        nav ul li {
+            margin: 0 50px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #fff;
+            padding: 10px;
+        }
+
+        .content {
+            margin-top: 60px;
         }
 
         .profile-image {
             border-radius: 50%;
-            max-width: 40%;
-            position: center;
+            max-width: 50%;
             height: auto;
         }
 
@@ -40,102 +75,86 @@
             margin-top: 10px;
         }
 
-        nav {
-            background-color: #333;
-            color: white;
-            padding: 10px;
-            text-align: center;
-            position: fixed;
-            width: 70%;
-            top: 0;
-            z-index: 1000;
-        }
-
-        nav a {
-            color: white;
-            text-decoration: none;
-            margin: 0 15px;
-        }
-
-        nav a:hover {
-            text-decoration: underline;
-        }
-
         section {
-            margin-top: 70px; /* Adjust based on the height of the nav bar */
+            margin-bottom: 40px;
         }
     </style>
 </head>
 <body>
     <nav>
-            <a href="#about">About Me</a>
-            <a href="#education">Education</a>
-            <a href="#experiences">Experiences</a>
-            <a href="#publications">Publications</a>
-            <a href="#projects">Projects</a>
-            <a href="#skills">Skills</a>
-            <a href="#awards">Awards</a>
-        </nav>
-    <div class="left-side">
-        <img src="https://github.com/farjanaakterjui/My-Photo/blob/main/Jui%20final%20pp.jpg?raw=true" alt="Profile Image" class="profile-image">
-        <h2>Farjana Akter Jui</h2>
-        <p>LECTURER</p>
-        <div class="contact-info">
-            <p><strong>Phone:</strong> +880 1759100422</p>
-            <p><strong>Email:</strong> jui.kuet.cse@gmail.com</p>
-            <p><strong>Address:</strong> B-112/3 Jaleshwar, Sobhanbag, Savar, Dhaka.</p>
-            <p><strong>Date of Birth:</strong> January 30th, 1999</p>
+        <ul>
+            <li><a href="#about-me">About Me</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#experiences">Experiences</a></li>
+            <li><a href="#publications">Publications</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#awards">Awards</a></li>
+        </ul>
+    </nav>
+    <div class="container">
+        <div class="left-side">
+<center>
+            <img src="https://github.com/farjanaakterjui/My-Photo/blob/main/Jui%20final%20pp.jpg?raw=true" alt="Profile Image" class="profile-image">
+            <h2>Farjana Akter Jui</h2>
+            <p>LECTURER</p>
+            <div class="contact-info">
+                <p><strong>Phone:</strong> +880 1759100422</p>
+                <p><strong>Email:</strong> jui.kuet.cse@gmail.com</p>
+                <p><strong>Address:</strong> B-112/3 Jaleshwar, Sobhanbag, Savar, Dhaka.</p>
+                <p><strong>Date of Birth:</strong> January 30th, 1999</p>
+            </div>
+</center>
         </div>
-    </div>
-    <div class="right-side">
-        <section id="about">
-            <h2>About Me</h2>
-            <p>Farjana Akter Jui is a Lecturer in the Department of Computer Science & Engineering at Green University of Bangladesh. Her research interests include Machine Learning, Image Processing, Augmented Reality, and Artificial Intelligence.</p>
-        </section>
-        <section id="education">
-            <h2>Education</h2>
-            <p><strong>2017 – 2022:</strong> Bachelor of Science in Computer Science and Engineering, Khulna University of Engineering & Technology (KUET), Khulna-9203. CGPA: 3.66/4.00. Thesis Title: Protein Secondary Structure Prediction Using GNN (Graph Neural Network).</p>
-            <p><strong>2016:</strong> Higher Secondary School Certificate (H.S.C) in Science, Savar Cantonment Public School & College, Savar, Dhaka. GPA: 5.00/5.00.</p>
-            <p><strong>2014:</strong> Secondary School Certificate (S.S.C) in Science, Savar Cantonment Public School & College, Savar, Dhaka. GPA: 5.00/5.00.</p>
-        </section>
-        <section id="experiences">
-            <h2>Experiences</h2>
-            <p><strong>Lecturer, Department of Computer Science & Engineering, Green University of Bangladesh, Dhaka, Bangladesh. (07 October, 2022 - Present)</strong></p>
-            <ul>
-                <li>Taught several courses such as Object-oriented programming, Digital Logic Design, Algorithm, Information System Design, etc.</li>
-                <li>Served as advisor during the Spring and Fall Semester of 2023.</li>
-                <li>Served as runner in the ICPC Asia Dhaka Regional Contest hosted by Green University of Bangladesh.</li>
-                <li>Contributed to Continuous Quality Improvement by preparing strategies based on course files each semester.</li>
-            </ul>
-        </section>
-        <section id="publications">
-            <h2>Publications</h2>
-            <p><strong>December 2021:</strong> Tamzid Hasan Nahid, Farjana Akter Jui, and Pintu Chandra Shill, "Protein Secondary Structure Prediction using Graph Neural Network," 2021 5th International Conference on Electrical Information and Communication Technology (EICT), 2021, pp. 1-6, doi: 10.1109/EICT54103.2021.9733590.</p>
-        </section>
-        <section id="projects">
-            <h2>Projects</h2>
-            <ul>
-                <li><strong>Undergraduate Thesis:</strong> Protein Secondary Structure Prediction Using GNN (Graph Neural Network). The protein’s graph representation, with amino acids as nodes and edges capturing relationships, is used for predicting secondary structure.</li>
-                <li><strong>3D-Monument-of-Bangladesh:</strong> A simple Graphics project of a monument using lighting (ambient, diffuse, specular), bezier curve, texture, color materials property etc. It contains rain effect, day mode, night mode, cloud movement, and light on off mode. <a href="https://github.com/farjanaakterjui/3D-Monument-of-Bangladesh">Project Link</a></li>
-                <li><strong>SmartClass Vision: 3D:</strong> A simple Graphics project of a 3D classroom using lighting (ambient, diffuse, specular), color materials property etc. It contains 2 normal lights and one spotlight on off mode, fan on off mode. <a href="https://github.com/farjanaakterjui/demo-3d-classroom">Project Link</a></li>
-                <li><strong>Movie Recommendation System:</strong> A Web Application that recommends movies using Python and machine learning. Flask was used for the web application project. Movies are recommended based on user input. If user input doesn’t match our csv file, it will show a sorry page. <a href="https://github.com/farjanaakterjui/recommendationsystem">Project Link</a></li>
-                <li><strong>Travel Information IOS App:</strong> Built on XCode. It contains signup, login page, historical page information, and location etc. <a href="https://github.com/farjanaakterjui/ios_travel_app">Project Link</a></li>
-                <li><strong>Online Restaurant Website:</strong> A web application using PHP, HTML, CSS, JavaScript, cookie, session, database. In the admin panel, admin can upload new food including price, picture, and food name. Total revenue is visible to admin. In the customer panel, customers can confirm and cancel orders. It also contains welcome, signup, login, logout, menu page for both admin and customer. <a href="https://github.com/farjanaakterjui/web">Project Link</a></li>
-            </ul>
-        </section>
-        <section id="skills">
-            <h2>Skills</h2>
-            <p><strong>Languages:</strong> C, C++, Python, Java, PHP, Swift, SQL, MySQL, HTML, CSS, Latex.</p>
-            <p><strong>Framework:</strong> Laravel, Bootstrap, OpenGL, Scikit-Learn, Pandas.</p>
-            <p><strong>OS:</strong> Windows, Linux, Raspberry Pi OS.</p>
-            <p><strong>Softwares:</strong> CodeBlocks, Eclipse, NetBeans, PyCharm, Android Studio, Jupyter Notebook, VS Code, Visual Studio, XCode, Bison, GitHub Desktop, Oracle 11g, Office, Powerpoint, Excel.</p>
-        </section>
-        <section id="awards">
-            <h2>Awards & Achievements</h2>
-            <p><strong>2023:</strong> Certificate in Teaching and Learning (CTL). Awarded by Green University of Bangladesh.</p>
-            <p><strong>2021:</strong> TOP 30 in UNDP Women’s Digital Innovation Hackathon. Built all-in-one Emergency medical healthcare platform conducted via Online.</p>
-            <p><strong>2018-2019:</strong> Dean’s Award. Faculty of Electrical and Electronic Engineering, KUET. Attained an average GPA of 3.75 or above in both the second and third years within a single academic year.</p>
-        </section>
+        <div class="right-side content">
+            <section id="about-me">
+                <h2>About Me</h2>
+                <p>I am Farjana Akter Jui, currently working as a  Lecturer in the Department of Computer Science & Engineering at Green University of Bangladesh. I Pursued my Bachelor of Science in Computer Science and Engineering from Khulna University of Engineering & Technology (KUET), where I conducted my thesis on "Protein Secondary Structure Prediction Using GNN (Graph Neural Network)" under the guidance of Dr. Pintu Chandra Shill. My research interests include Machine Learning, Artificial Intelligence, and Image Processing.</p>
+            </section>
+            <section id="education">
+                <h2>Education</h2>
+                <p><strong>2017 – 2022:</strong> Bachelor of Science in Computer Science and Engineering, Khulna University of Engineering & Technology (KUET), Khulna. GPA: 3.66/4.00. Thesis Title: Protein Secondary Structure Prediction Using GNN (Graph Neural Network).</p>
+                <p><strong>2016:</strong> Higher Secondary School Certificate (H.S.C) in Science, Savar Cantonment Public School & College, Savar, Dhaka. GPA: 5.00/5.00.</p>
+                <p><strong>2014:</strong> Secondary School Certificate (S.S.C) in Science, Savar Cantonment Public School & College, Savar, Dhaka. GPA: 5.00/5.00.</p>
+            </section>
+            <section id="experiences">
+                <h2>Experiences</h2>
+                <p><strong>Lecturer, Department of Computer Science & Engineering, Green University of Bangladesh, Dhaka, Bangladesh. (07 October, 2022 - Present)</strong></p>
+                <ul>
+                    <li>Taught several courses such as Object-oriented programming, Digital Logic Design, Algorithm, Information System Design, etc.</li>
+                    <li>Served as advisor during the Spring and Fall Semester of 2023.</li>
+                    <li>Served as runner in the ICPC Asia Dhaka Regional Contest hosted by Green University of Bangladesh.</li>
+                    <li>Contributed to Continuous Quality Improvement by preparing strategies based on course files each semester.</li>
+                </ul>
+            </section>
+            <section id="publications">
+                <h2>Publications</h2>
+                <p><strong>December 2021:</strong> Tamzid Hasan Nahid, Farjana Akter Jui, and Pintu Chandra Shill, "Protein Secondary Structure Prediction using Graph Neural Network," 2021 5th International Conference on Electrical Information and Communication Technology (EICT), 2021, pp. 1-6, doi: <a href="https://doi.org/10.1109/EICT54103.2021.9733590" target="_blank">10.1109/EICT54103.2021.9733590</a>.</p>
+            </section>
+            <section id="projects">
+                <h2>Projects</h2>
+                <p><strong>Undergraduate Thesis:</strong> Protein Secondary Structure Prediction Using GNN (Graph Neural Network). The protein’s graph representation, with amino acids as nodes and edges capturing relationships, is used for predicting secondary structure.</p>
+                <p><strong>GitHub Projects:</strong> <a href="https://github.com/farjanaakterjui" target="_blank">https://github.com/farjanaakterjui</a></p>
+            </section>
+            <section id="skills">
+                <h2>Skills</h2>
+                <ul>
+                    <li>Programming Languages: Python, Java, C++</li>
+                    <li>Web Development: HTML, CSS, JavaScript</li>
+                    <li>Data Analysis: MATLAB, R</li>
+                    <li>Machine Learning: TensorFlow, Keras</li>
+                </ul>
+            </section>
+            <section id="awards">
+                <h2>Awards</h2>
+                <ul>
+                    <li>2014: Talent pool Scholarship in both junior school certificate (JSC) and primary school certificate (PSC) examinations.</li>
+                    <li>Represented Bangladesh in NASA space Apps Challenge in Houston Texas in 2022 as a facilitator.</li>
+                    <li>Received awards for securing the 1st position consecutively from class 1 to class 5 and 2nd to 3rd position in class six to class ten.</li>
+                    <li>Secured 1st to 3rd positions in my 1st, 2nd, and 3rd years within a single academic year.</li>
+                </ul>
+            </section>
+        </div>
     </div>
 </body>
 </html>
