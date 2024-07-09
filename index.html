@@ -8,47 +8,27 @@
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-        }
-
-        .container {
             display: flex;
-            flex-direction: column;
         }
 
-        .left-side, .right-side {
-            width: 100%;
-            box-sizing: border-box;
+        .left-side {
+            width: 30%;
+            padding: 20px;
+            background: #f0f0f0;
+            position: fixed;
+            height: 100%;
+            overflow-y: auto;
+        }
+
+        .right-side {
+            width: 70%;
+            margin-left: 30%;
             padding: 20px;
         }
 
-        @media (min-width: 768px) {
-            /* Tablet and Desktop Styles */
-            .container {
-                flex-direction: row;
-            }
-
-            .left-side {
-                width: 30%;
-                position: fixed;
-                top: 0;
-                bottom: 0;
-                overflow-y: auto;
-                padding: 20px;
-                background: #f0f0f0; /* Optional: to make left side distinguishable */
-            }
-
-            .right-side {
-                width: 70%;
-                margin-left: 30%;
-                padding-top: 20px;
-                overflow-y: scroll;
-            }
-        }
-
-        /* Additional Styles */
         .profile-image {
             border-radius: 50%;
-            max-width: 40%;
+            max-width: 100%;
             height: auto;
         }
 
@@ -61,6 +41,11 @@
             color: white;
             padding: 10px;
             text-align: center;
+            position: fixed;
+            width: 70%;
+            top: 0;
+            left: 30%;
+            z-index: 1000;
         }
 
         nav a {
@@ -74,55 +59,80 @@
         }
 
         section {
-            margin-top: 20px;
+            margin-top: 70px; /* Adjust based on the height of the nav bar */
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <div class="left-side">
-            <img src="https://github.com/farjanaakterjui/My-Photo/blob/main/Jui%20final%20pp.jpg?raw=true" alt="Profile Image" class="profile-image">
-            <h2>Farjana Akter Jui</h2>
-            <p>LECTURER</p>
-            <div class="contact-info">
-                <p><strong>Phone:</strong> +880 1759100422</p>
-                <p><strong>Email:</strong> jui.kuet.cse@gmail.com</p>
-                <p><strong>Address:</strong> B-112/3 Jaleshwar, Sobhanbag, Savar, Dhaka.</p>
-                <p><strong>Date of Birth:</strong> January 30th, 1999</p>
-            </div>
+    <div class="left-side">
+        <img src="https://github.com/farjanaakterjui/My-Photo/blob/main/Jui%20final%20pp.jpg?raw=true" alt="Profile Image" class="profile-image">
+        <h2>Farjana Akter Jui</h2>
+        <p>LECTURER</p>
+        <div class="contact-info">
+            <p><strong>Phone:</strong> +880 1759100422</p>
+            <p><strong>Email:</strong> jui.kuet.cse@gmail.com</p>
+            <p><strong>Address:</strong> B-112/3 Jaleshwar, Sobhanbag, Savar, Dhaka.</p>
+            <p><strong>Date of Birth:</strong> January 30th, 1999</p>
         </div>
-        <div class="right-side">
-            <nav>
-                <a href="#about">About Me</a>
-                <a href="#education">Education</a>
-                <a href="#experiences">Experiences</a>
-                <a href="#publications">Publications</a>
-                <!-- Add more links as needed -->
-            </nav>
-            <section id="about">
-                <h2>About Me</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras ultricies ligula sed magna dictum porta. Proin eget tortor risus. Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui. Pellentesque in ipsum id orci porta dapibus. Proin eget tortor risus. Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui. Donec sollicitudin molestie malesuada. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a.</p>
-                <p>Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Nulla quis lorem ut libero malesuada feugiat. Vivamus suscipit tortor eget felis porttitor volutpat. Nulla quis lorem ut libero malesuada feugiat. Vivamus suscipit tortor eget felis porttitor volutpat. Proin eget tortor risus. Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Curabitur non nulla sit amet nisl tempus convallis quis ac lectus.</p>
-                <p>Donec rutrum congue leo eget malesuada. Vivamus suscipit tortor eget felis porttitor volutpat. Cras ultricies ligula sed magna dictum porta. Vivamus suscipit tortor eget felis porttitor volutpat. Donec sollicitudin molestie malesuada. Proin eget tortor risus. Donec rutrum congue leo eget malesuada. Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a.</p>
-            </section>
-            <section id="education">
-                <h2>Education</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras ultricies ligula sed magna dictum porta. Proin eget tortor risus. Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui. Pellentesque in ipsum id orci porta dapibus. Proin eget tortor risus. Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui. Donec sollicitudin molestie malesuada. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a.</p>
-                <p>Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Nulla quis lorem ut libero malesuada feugiat. Vivamus suscipit tortor eget felis porttitor volutpat. Nulla quis lorem ut libero malesuada feugiat. Vivamus suscipit tortor eget felis porttitor volutpat. Proin eget tortor risus. Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Curabitur non nulla sit amet nisl tempus convallis quis ac lectus.</p>
-                <p>Donec rutrum congue leo eget malesuada. Vivamus suscipit tortor eget felis porttitor volutpat. Cras ultricies ligula sed magna dictum porta. Vivamus suscipit tortor eget felis porttitor volutpat. Donec sollicitudin molestie malesuada. Proin eget tortor risus. Donec rutrum congue leo eget malesuada. Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a.</p>
-            </section>
-            <section id="experiences">
-                <h2>Experiences</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras ultricies ligula sed magna dictum porta. Proin eget tortor risus. Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui. Pellentesque in ipsum id orci porta dapibus. Proin eget tortor risus. Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui. Donec sollicitudin molestie malesuada. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a.</p>
-                <p>Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Nulla quis lorem ut libero malesuada feugiat. Vivamus suscipit tortor eget felis porttitor volutpat. Nulla quis lorem ut libero malesuada feugiat. Vivamus suscipit tortor eget felis porttitor volutpat. Proin eget tortor risus. Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Curabitur non nulla sit amet nisl tempus convallis quis ac lectus.</p>
-                <p>Donec rutrum congue leo eget malesuada. Vivamus suscipit tortor eget felis porttitor volutpat. Cras ultricies ligula sed magna dictum porta. Vivamus suscipit tortor eget felis porttitor volutpat. Donec sollicitudin molestie malesuada. Proin eget tortor risus. Donec rutrum congue leo eget malesuada. Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a.</p>
-            </section>
-            <section id="publications">
-                <h2>Publications</h2>
-                <p>Your publications details go here...</p>
-            </section>
-            <!-- Add more sections as needed -->
-        </div>
+    </div>
+    <div class="right-side">
+        <nav>
+            <a href="#about">About Me</a>
+            <a href="#education">Education</a>
+            <a href="#experiences">Experiences</a>
+            <a href="#publications">Publications</a>
+            <a href="#projects">Projects</a>
+            <a href="#skills">Skills</a>
+            <a href="#awards">Awards</a>
+        </nav>
+        <section id="about">
+            <h2>About Me</h2>
+            <p>Farjana Akter Jui is a Lecturer in the Department of Computer Science & Engineering at Green University of Bangladesh. Her research interests include Machine Learning, Image Processing, Augmented Reality, and Artificial Intelligence.</p>
+        </section>
+        <section id="education">
+            <h2>Education</h2>
+            <p><strong>2017 – 2022:</strong> Bachelor of Science in Computer Science and Engineering, Khulna University of Engineering & Technology (KUET), Khulna-9203. CGPA: 3.66/4.00. Thesis Title: Protein Secondary Structure Prediction Using GNN (Graph Neural Network).</p>
+            <p><strong>2016:</strong> Higher Secondary School Certificate (H.S.C) in Science, Savar Cantonment Public School & College, Savar, Dhaka. GPA: 5.00/5.00.</p>
+            <p><strong>2014:</strong> Secondary School Certificate (S.S.C) in Science, Savar Cantonment Public School & College, Savar, Dhaka. GPA: 5.00/5.00.</p>
+        </section>
+        <section id="experiences">
+            <h2>Experiences</h2>
+            <p><strong>Lecturer, Department of Computer Science & Engineering, Green University of Bangladesh, Dhaka, Bangladesh. (07 October, 2022 - Present)</strong></p>
+            <ul>
+                <li>Taught several courses such as Object-oriented programming, Digital Logic Design, Algorithm, Information System Design, etc.</li>
+                <li>Served as advisor during the Spring and Fall Semester of 2023.</li>
+                <li>Served as runner in the ICPC Asia Dhaka Regional Contest hosted by Green University of Bangladesh.</li>
+                <li>Contributed to Continuous Quality Improvement by preparing strategies based on course files each semester.</li>
+            </ul>
+        </section>
+        <section id="publications">
+            <h2>Publications</h2>
+            <p><strong>December 2021:</strong> Tamzid Hasan Nahid, Farjana Akter Jui, and Pintu Chandra Shill, "Protein Secondary Structure Prediction using Graph Neural Network," 2021 5th International Conference on Electrical Information and Communication Technology (EICT), 2021, pp. 1-6, doi: 10.1109/EICT54103.2021.9733590.</p>
+        </section>
+        <section id="projects">
+            <h2>Projects</h2>
+            <ul>
+                <li><strong>Undergraduate Thesis:</strong> Protein Secondary Structure Prediction Using GNN (Graph Neural Network). The protein’s graph representation, with amino acids as nodes and edges capturing relationships, is used for predicting secondary structure.</li>
+                <li><strong>3D-Monument-of-Bangladesh:</strong> A simple Graphics project of a monument using lighting (ambient, diffuse, specular), bezier curve, texture, color materials property etc. It contains rain effect, day mode, night mode, cloud movement, and light on off mode. <a href="https://github.com/farjanaakterjui/3D-Monument-of-Bangladesh">Project Link</a></li>
+                <li><strong>SmartClass Vision: 3D:</strong> A simple Graphics project of a 3D classroom using lighting (ambient, diffuse, specular), color materials property etc. It contains 2 normal lights and one spotlight on off mode, fan on off mode. <a href="https://github.com/farjanaakterjui/demo-3d-classroom">Project Link</a></li>
+                <li><strong>Movie Recommendation System:</strong> A Web Application that recommends movies using Python and machine learning. Flask was used for the web application project. Movies are recommended based on user input. If user input doesn’t match our csv file, it will show a sorry page. <a href="https://github.com/farjanaakterjui/recommendationsystem">Project Link</a></li>
+                <li><strong>Travel Information IOS App:</strong> Built on XCode. It contains signup, login page, historical page information, and location etc. <a href="https://github.com/farjanaakterjui/ios_travel_app">Project Link</a></li>
+                <li><strong>Online Restaurant Website:</strong> A web application using PHP, HTML, CSS, JavaScript, cookie, session, database. In the admin panel, admin can upload new food including price, picture, and food name. Total revenue is visible to admin. In the customer panel, customers can confirm and cancel orders. It also contains welcome, signup, login, logout, menu page for both admin and customer. <a href="https://github.com/farjanaakterjui/web">Project Link</a></li>
+            </ul>
+        </section>
+        <section id="skills">
+            <h2>Skills</h2>
+            <p><strong>Languages:</strong> C, C++, Python, Java, PHP, Swift, SQL, MySQL, HTML, CSS, Latex.</p>
+            <p><strong>Framework:</strong> Laravel, Bootstrap, OpenGL, Scikit-Learn, Pandas.</p>
+            <p><strong>OS:</strong> Windows, Linux, Raspberry Pi OS.</p>
+            <p><strong>Softwares:</strong> CodeBlocks, Eclipse, NetBeans, PyCharm, Android Studio, Jupyter Notebook, VS Code, Visual Studio, XCode, Bison, GitHub Desktop, Oracle 11g, Office, Powerpoint, Excel.</p>
+        </section>
+        <section id="awards">
+            <h2>Awards & Achievements</h2>
+            <p><strong>2023:</strong> Certificate in Teaching and Learning (CTL). Awarded by Green University of Bangladesh.</p>
+            <p><strong>2021:</strong> TOP 30 in UNDP Women’s Digital Innovation Hackathon. Built all-in-one Emergency medical healthcare platform conducted via Online.</p>
+            <p><strong>2018-2019:</strong> Dean’s Award. Faculty of Electrical and Electronic Engineering, KUET. Attained an average GPA of 3.75 or above in both the second and third years within a single academic year.</p>
+        </section>
     </div>
 </body>
 </html>
