@@ -19,12 +19,14 @@
             position: fixed;
             height: 100%;
             overflow-y: auto;
+            float: left;
         }
 
         .right-side {
             width: 70%;
             margin-left: 0%;
             padding: 20px;
+            float:right;
         }
 
         .profile-image {
@@ -46,7 +48,6 @@
             position: fixed;
             width: 70%;
             top: 0;
-            left: 30%;
             z-index: 1000;
         }
 
@@ -66,6 +67,15 @@
     </style>
 </head>
 <body>
+    <nav>
+            <a href="#about">About Me</a>
+            <a href="#education">Education</a>
+            <a href="#experiences">Experiences</a>
+            <a href="#publications">Publications</a>
+            <a href="#projects">Projects</a>
+            <a href="#skills">Skills</a>
+            <a href="#awards">Awards</a>
+        </nav>
     <div class="left-side">
         <img src="https://github.com/farjanaakterjui/My-Photo/blob/main/Jui%20final%20pp.jpg?raw=true" alt="Profile Image" class="profile-image">
         <h2>Farjana Akter Jui</h2>
@@ -78,15 +88,6 @@
         </div>
     </div>
     <div class="right-side">
-        <nav>
-            <a href="#about">About Me</a>
-            <a href="#education">Education</a>
-            <a href="#experiences">Experiences</a>
-            <a href="#publications">Publications</a>
-            <a href="#projects">Projects</a>
-            <a href="#skills">Skills</a>
-            <a href="#awards">Awards</a>
-        </nav>
         <section id="about">
             <h2>About Me</h2>
             <p>Farjana Akter Jui is a Lecturer in the Department of Computer Science & Engineering at Green University of Bangladesh. Her research interests include Machine Learning, Image Processing, Augmented Reality, and Artificial Intelligence.</p>
