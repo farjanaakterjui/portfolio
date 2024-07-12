@@ -4,7 +4,7 @@
       <meta charset="UTF-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
       <style>
-                  body {
+                   body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
@@ -96,33 +96,30 @@
             .left-side {
                width: 100%;
                height: auto;
+               position: relative;
+               padding: 10px;
+               margin-top: 95px;
                position: fixed;
-               overflow: auto;
-               top: 55px;
-               bottom: 0;
             }
             .right-side {
                margin-left: 0;
                padding: 20px;
                width: 100%;
-               margin-top: calc(100vh + 55px);
             }
          }
          @media screen and (max-width: 480px) {
             .left-side {
                width: 100%;
                height: auto;
+               position: relative;
                position: fixed;
-               overflow: auto;
-               top: 55px;
-               bottom: 0;
                padding: 10px;
+               margin-top: 95px;
             }
             .right-side {
                margin-left: 0;
                padding: 10px;
                width: 100%;
-               margin-top: calc(100vh + 55px);
             }
             .social-links {
                flex-direction: column;
