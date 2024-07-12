@@ -11,7 +11,7 @@
          }
          .container {
          display: flex;
-         flex-direction: column;
+         flex-direction: row;
          }
          .left-side {
          background: #f4f4f4;
@@ -20,10 +20,10 @@
          position: fixed;
          overflow-y: auto;
          padding: 20px;
-         margin-top: 40px;
+         margin-top: 55px;
          }
          .right-side {
-         margin-left: 30%;
+         margin-left: 35%;
          padding: 20px;
          }
          nav {
@@ -42,14 +42,16 @@
          padding: 0;
          display: flex;
          justify-content: space-around;
+         flex-wrap: wrap;
          }
          nav ul li {
-         margin: 0 50px;
+         margin: 0 10px;
          }
          nav ul li a {
          text-decoration: none;
          color: #fff;
          padding: 10px;
+         display: block;
          }
          .content {
          margin-top: 60px;
@@ -62,51 +64,63 @@
          .contact-info {
          margin-top: 10px;
          }
+         .social-links {
+         display: flex;
+         justify-content: center;
+         gap: 10px;
+         margin-top: 10px;
+         }
+         .social-links a img {
+         display: inline-block;
+         vertical-align: middle;
+         }}
          section {
          margin-bottom: 40px;
          }
-         /* Style the header */
-         .header {
-         background-color: #f1f1f1;
-         padding: 20px;
+         .footer {
+         background: #333;
+         color: #fff;
          text-align: center;
-         }
-         /* Style the top navigation bar */
-         .topnav {
-         overflow: hidden;
-         background-color: #333;
-         }
-         /* Style the topnav links */
-         .topnav a {
-         float: left;
-         display: block;
-         color: #f2f2f2;
-         text-align: center;
-         padding: 14px 16px;
-         text-decoration: none;
-         }
-         /* Change color on hover */
-         .topnav a:hover {
-         background-color: #ddd;
-         color: black;
-         }
-         /* Create three equal columns that floats next to each other */
-         .column {
-         float: left;
-         width: 37.5%;
-         padding: 15px;
-         }
-         /* Clear floats after the columns */
-         .row::after {
-         content: "";
-         display: table;
-         clear: both;
-         }
-         /* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
-         @media screen and (max-width:600px) {
-         .column {
+         padding: 1px 0;
+         position: fixed;
          width: 100%;
+         bottom: 0;
          }
+         @media screen and (max-width: 600px) {
+         .left-side {
+         width: 100%;
+         position: relative;
+         height: auto;
+         margin-top: 0;
+         padding: 10px;
+         }
+         .right-side {
+         margin-left: 0;
+         padding: 10px;
+         }
+         nav ul {
+         flex-direction: column;
+         }
+         nav ul li {
+         margin: 5px 0;
+         }
+         }
+         table {
+         width: 100%;
+         border-collapse: collapse;
+         }
+         td {
+         border: none;
+         padding: 10px;
+         vertical-align: top;
+         }
+         td.center {
+         text-align: center;
+         vertical-align: middle;
+         border-right: 2px solid #f4f4f4;
+         }
+         td.justify {
+         text-align: justify;
          }
       </style>
    </head>
@@ -132,7 +146,21 @@
                   <p><strong>Phone:</strong> +880 1759100422</p>
                   <p><strong>Email:</strong> jui.kuet.cse@gmail.com</p>
                   <p><strong>Address:</strong> B-112/3 Jaleshwar, Sobhanbag, Savar, Dhaka.</p>
-                  <p><strong>Date of Birth:</strong> January 30th, 1999</p>
+                  <p><strong>Date of Birth:</strong> January 30th, 1999.</p>
+               </div>
+               <div class="social-links">
+                  <a href="https://www.linkedin.com/in/farjana-akter-2518b819a/" target="_blank">
+                  <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn" width="20" height="20">
+                  LinkedIn
+                  </a>
+                  <a href="https://github.com/farjanaakterjui" target="_blank">
+                  <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="GitHub" width="20" height="20">
+                  GitHub
+                  </a>
+                  <a href="https://scholar.google.com/citations?hl=en&user=NVf3OzYAAAAJ" target="_blank">
+                  <img src="https://cdn-icons-png.flaticon.com/512/2875/2875331.png" alt="Google Scholar" width="20" height="20">
+                  Google Scholar
+                  </a>
                </div>
             </center>
          </div>
@@ -140,35 +168,76 @@
             <section id="about-me">
                <h2>About Me</h2>
                <hr>
-               <p>I am Farjana Akter Jui, currently working as a  Lecturer in the Department of Computer Science & Engineering at Green University of Bangladesh. I Pursued my Bachelor of Science in Computer Science and Engineering from Khulna University of Engineering & Technology (KUET), where I conducted my thesis on "Protein Secondary Structure Prediction Using GNN (Graph Neural Network)" under the guidance of Dr. Pintu Chandra Shill. My research interests include Machine Learning, Artificial Intelligence, and Image Processing.</p>
+               <p style="text-align: justify;"><span style="text-align: start;color: rgb(0, 0, 0);font-size: medium;">I am Farjana Akter Jui, currently working as a Lecturer in the Department of Computer Science &amp; Engineering at Green University of Bangladesh. I Pursued my Bachelor of Science in Computer Science and Engineering from Khulna University of Engineering &amp; Technology (KUET), where I conducted my thesis on &quot;Protein Secondary Structure Prediction Using GNN (Graph Neural Network)&quot; under the guidance of Dr. Pintu Chandra Shill. My research interests include Machine Learning, Artificial Intelligence, and Image Processing.</span></p>
             </section>
             <section id="education">
                <h2>Education</h2>
                <hr>
-               <p><strong>2017 – 2022:</strong> Bachelor of Science in Computer Science and Engineering, Khulna University of Engineering & Technology (KUET), Khulna. GPA: 3.66/4.00. Thesis Title: Protein Secondary Structure Prediction Using GNN (Graph Neural Network).</p>
-               <p><strong>2016:</strong> Higher Secondary School Certificate (H.S.C) in Science, Savar Cantonment Public School & College, Savar, Dhaka. GPA: 5.00/5.00.</p>
-               <p><strong>2014:</strong> Secondary School Certificate (S.S.C) in Science, Savar Cantonment Public School & College, Savar, Dhaka. GPA: 5.00/5.00.</p>
+               <table>
+                  <tbody>
+                     <tr>
+                        <td class="center"><strong>2017 – 2022</strong><br>Computer Science</td>
+                        <td>
+                           <p><em>Bachelor of Science</em></p>
+                           <div>Khulna University of Engineering & Technology (KUET), Khulna.</div>
+                           <div>CGPA: 3.66/4.00</div>
+                           <div>Thesis Title: Protein Secondary Structure Prediction Using GNN (Graph Neural Network).</div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="center"><strong>2016</strong><br>Science</td>
+                        <td>
+                           <p><em>Higher Secondary School Certificate (H.S.C)</em></p>
+                           <div>Savar Cantonment Public School & College, Savar, Dhaka.</div>
+                           <div>GPA: 5.00/5.00</div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="center"><strong>2014</strong><br>Science</td>
+                        <td>
+                           <p><em>Secondary School Certificate (S.S.C)</em></p>
+                           <div>Savar Cantonment Public School & College, Savar, Dhaka.</div>
+                           <div>GPA: 5.00/5.00</div>
+                        </td>
+                     </tr>
+                  </tbody>
+               </table>
+               <p><br></p>
             </section>
             <section id="experiences">
                <h2>Experiences</h2>
                <hr>
-               <p><strong>07 October, 2022 - Present:</strong> Lecturer, Department of Computer Science & Engineering, Green University of Bangladesh, Dhaka, Bangladesh.</p>
+               <table>
+                  <tbody>
+                     <tr>
+                        <td >07 October, 2022
+                           <br>- Present
+                        </td>
+                        <td>
+                           <div>Lecturer, Department of Computer Science & Engineering,</div>
+                           <div>Green University of Bangladesh, Dhaka, Bangladesh.</div>
+                        </td>
+                     </tr>
+                  </tbody>
+               </table>
                <p><strong>Key Responsibilities:</strong></p>
-<ul>
-    <li>
-        <p>&nbsp;Taught several courses such as Object-oriented programming, Digital Logic Design, Algorithm, Information System Design, etc.</p>
-    </li>
-    <li>
-        <p>Serve as advisor during the Spring and Fall Semester of 2023.</p>
-    </li>
-    <li>
-        <p>Contributed to Continuous Quality Improvement by preparing strategies based on course files&nbsp;each semester.</p>
-    </li>
-    <li>
-        <p>Creating Course Curriculum.</p>
-    </li>
-</ul>
-<p><br></p>
+               <ul>
+                  <li>
+                     <p>Taught several courses such as Object-oriented programming, Digital Logic Design, Algorithm, Information System Design, etc.</p>
+                  </li>
+                  <li>
+                     <p>Serve as advisor, and co-course co-ordinator.</p>
+                  </li>
+                  <li>
+                     <p>Server as runner in the <strong>ICPC Asia Dhaka Regional Contest</strong> hosted by Green University
+                        of Bangladesh.
+                     </p>
+                  </li>
+                  <li>
+                     <p>Contributed to Continuous Quality Improvement by preparing strategies based on course files each semester.</p>
+                  </li>
+               </ul>
+               <p><br></p>
                <h2> Course Conduction</h2>
                <hr>
                <div class="row">
@@ -221,11 +290,11 @@
                <h2>Publications</h2>
                <hr>
                <p>Protein Secondary Structure Prediction using Graph Neural Network.</p>
-<p><strong>Collaborators:&nbsp;</strong><em>Tamzid Hasan Nahid, Farjana Akter Jui and Pintu Chandra Shill.</em></p>
-<p><strong>Conference:</strong> 5th International Conference on Electrical Information and Communication Technology (EICT), 2021, pp. 1-6.</p>
-<p><span style="color:#3D9BE9;"><u><a href="https://doi.org/10.1109/EICT54103.2021.9733590" target="_blank">Click here to read the full paper.</a></u></span></p>
-<p><br></p>       
-</section>
+               <p><strong>Collaborators:&nbsp;</strong><em>Tamzid Hasan Nahid, Farjana Akter Jui and Pintu Chandra Shill.</em></p>
+               <p><strong>Conference:</strong> 5th International Conference on Electrical Information and Communication Technology (EICT), 2021, pp. 1-6.</p>
+               <p><span style="color:#3D9BE9;"><u><a href="https://doi.org/10.1109/EICT54103.2021.9733590" target="_blank">Click here to read the full paper.</a></u></span></p>
+               <p><br></p>
+            </section>
             <section id="projects">
                <h2>Projects</h2>
                <hr>
@@ -243,30 +312,83 @@
                <p><strong>Tools &amp; Techniques:</strong> Swift, IOS.</p>
                <p><strong>&bull; Online Restaurant Website&nbsp;</strong></p>
                <p>A web application using php html css javascript, cookie, session, database. In admin panel, admin can upload new food including price, picture and food name. Total revenue is visible to admin. In customer panel, customer can confirm and cancel order. It also contains welcome, signup, login, logout ,menu page for both admin and customer.</p>
-               <p><strong>Tools &amp; Techniques:</strong> PHP, Bootstrap, CSS</p>
+               <p><strong>Tools &amp; Techniques:</strong> PHP, Bootstrap, CSS.</p>
                <p><br></p>
             </section>
             <section id="skills">
                <h2>Skills</h2>
                <hr>
-               <ul>
-                  <li>Programming Languages: Python, Java, C++</li>
-                  <li>Web Development: HTML, CSS, JavaScript</li>
-                  <li>Data Analysis: MATLAB, R</li>
-                  <li>Machine Learning: TensorFlow, Keras</li>
-               </ul>
+               <table>
+                  <tbody>
+                     <tr>
+                        <td class="center"><strong>Languages:</strong></td>
+                        <td>
+                           <p>C, C++, Python, Java, PHP, Swift, SQL, MySQL, HTML, CSS.</p>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="center"><strong>Framework:</strong></td>
+                        <td>
+                           <p>Laravel, Bootstrap, OpenGL, Scikit-Learn, Pandas.</p>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="center"><strong>OS:</strong></td>
+                        <td>
+                           <p>Windows, Linux, Raspberry Pi OS.</p>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="center"><strong>Softwares:</strong></td>
+                        <td>
+                           <p>odeBlocks, Eclipse, NetBeans, PyCharm, Android Studio, Jupyter Notebook, VS Code, Visual Studio, XCode, Bison, GitHub Desktop, Oracle 11g, Office, Powerpoint, Excel.</p>
+                        </td>
+                     </tr>
+                  </tbody>
+               </table>
             </section>
             <section id="awards">
                <h2>Awards</h2>
                <hr>
-               <ul>
-                  <li>2014: Talent pool Scholarship in both junior school certificate (JSC) and primary school certificate (PSC) examinations.</li>
-                  <li>Represented Bangladesh in NASA space Apps Challenge in Houston Texas in 2022 as a facilitator.</li>
-                  <li>Received awards for securing the 1st position consecutively from class 1 to class 5 and 2nd to 3rd position in class six to class ten.</li>
-                  <li>Secured 1st to 3rd positions in my 1st, 2nd, and 3rd years within a single academic year.</li>
-               </ul>
+               <table>
+                  <tbody>
+                     <tr>
+                        <td class="center"><strong>2023</strong></td>
+                        <td>
+                           <div><strong>Certificate in Teaching and Learning (CTL).</strong></div>
+                           <p><em>Awarded by Green University of Bangladesh.
+                              </em>
+                           </p>
+                        </td>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="center"><strong>2021</strong></td>
+                        <td>
+                           <div><strong>TOP 30</strong> in UNDP Women’s Digital Innovation Hackathon.</div>
+                           <div>Build all in one Emergency medical healthcare platform.</div>
+                           <p><em>conducted via Online.</em>
+                           <p>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="center"><strong>2018 - 2019</strong></td>
+                        <td>
+                           <div><strong>Dean’s Award.</strong> 
+                           </div>
+                           <div>Faculty of Electrical and Electronic Engineering, KUET.</div>
+                           <p><em>Attained an average GPA of 3.75 or above in both the second and third years within a single
+                              academic year.</em>
+                           </p>
+                        </td>
+                     </tr>
+                  </tbody>
+               </table>
             </section>
          </div>
+      </div>
+      <div class="footer">
+         <p>&copy; 2024 Farjana Akter Jui. All rights reserved.</p>
       </div>
    </body>
 </html>
