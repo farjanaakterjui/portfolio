@@ -2,7 +2,7 @@
 <html lang="en">
    <head>
       <meta charset="UTF-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
       <style>
          body {
          font-family: Arial, sans-serif;
@@ -86,42 +86,24 @@
          width: 100%;
          bottom: 0;
          }
-         @media screen and (max-width: 600px) {
-         .left-side {
-         width: 100%;
-         position: relative;
-         height: auto;
-         margin-top: 0;
+         @media screen and (max-width: 400px) {
+         .left-side{
+word-wrap: break-word;
+        background: #f4f4f4;
+         height: 100vh;
+         width: 25%;
+         position: fixed;
+         overflow-y: auto;
          padding: 10px;
-         }
+         margin-top: 55px;
+
+}
          .right-side {
-         margin-left: 0;
-         padding: 10px;
+         margin-left: 50px;
+         padding: 30px;
+         flex:100%;
          }
-         nav ul {
-         flex-direction: column;
-         }
-         nav ul li {
-         margin: 5px 0;
-         }
-         }
-         table {
-         width: 100%;
-         border-collapse: collapse;
-         }
-         td {
-         border: none;
-         padding: 10px;
-         vertical-align: top;
-         }
-         td.center {
-         text-align: center;
-         vertical-align: middle;
-         border-right: 2px solid #f4f4f4;
-         }
-         td.justify {
-         text-align: justify;
-         }
+        
       </style>
    </head>
    <body>
@@ -146,7 +128,6 @@
                   <p><strong>Phone:</strong> +880 1759100422</p>
                   <p><strong>Email:</strong> jui.kuet.cse@gmail.com</p>
                   <p><strong>Address:</strong> B-112/3 Jaleshwar, Sobhanbag, Savar, Dhaka.</p>
-                  <p><strong>Date of Birth:</strong> January 30th, 1999.</p>
                </div>
                <div class="social-links">
                   <a href="https://www.linkedin.com/in/farjana-akter-2518b819a/" target="_blank">
